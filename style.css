@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar {
+	 position: fixed;
+	 width: 200px;
+	 height: 100%;
+	 background: yellow;
+}
+.content {
+	 margin-left: 200px;
+	 width: auto;
+	 position: relative;
+	 background: blue;
+	 overflow: auto;
+	 z-index: 1;
+}
+
+.box-title {
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.box {
+color: #212121;
+float: left;
+width: 33.33%;
+background: #ffffff;
+}
