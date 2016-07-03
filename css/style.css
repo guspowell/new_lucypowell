@@ -13,7 +13,6 @@ body {
 	 margin-left: 200px;
 	 width: auto;
 	 position: relative;
-	 background: blue;
 	 overflow: auto;
 	 z-index: 1;
 }

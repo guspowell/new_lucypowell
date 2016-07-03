@@ -1,16 +1,26 @@
 
 .box-title {
-font-size: 30px;
-margin-bottom: 10px;
+  font-size: 30px;
+  margin: 0;
 }
 
 .box {
-color: #212121;
-float: left;
-width: 33.333%;
-background: #ffffff;
-margin: 0;
-padding: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  float: left;
+  width: 33.33%;
+  background: #ffffff;
+  margin: 0;
+  padding: 5px;
+}
+
+.box-wrapper {
+  background-color: red;
+}
+
+.box img {
+  width: 100%;
 }
 
 .isotope-item {
