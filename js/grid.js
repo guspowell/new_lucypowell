@@ -45,38 +45,37 @@ $(window).load(function(){
 
     if(scrollTop + windowHeight == docuHeight){
 
-      nextTenImages = imagesData.splice(0,2);
-
-      var content =
-          "<div class='box " + nextTenImages[0]["type"] + "'" + ">" +
+      nextTenImages = imagesData.splice(0,10);
+      var content = ""
+      for (var i = 0; i < nextTenImages.length; i++) {
+          content +=
+          "<div class='box " + nextTenImages[i]["type"] + "'" + ">" +
             "<div class='box-wrapper'>" +
-              "<img src='" + nextTenImages[0]["src"] + "' />" +
-            "</div>"
+              "<img src='" + nextTenImages[i]["src"] + "' />" +
+            "</div>" +
           "</div>"
+      };
       console.log(content)
 
-
-      $('body').append('<div id="temp-load"</div>');
+      $('body').append('<div id="temp-load"><div id="grid"></div></div>');
 
       page += 1;
 
-      $('#temp-load').load('pages/page' + page + '.html #grid', function(){
+      $('#temp-load > #grid').append(content)
 
-        $('#temp-load > #grid').children().css({
-            opacity: 0
-        });
+      $('#temp-load > #grid').children().css({
+          opacity: 0
+      });
 
-        var toAdd = $('#temp-load > #grid').html();
+      var toAdd = $('#temp-load > #grid').html();
 
-        $container.isotope('insert', $(toAdd), function(){
+      $container.isotope('insert', $(toAdd), function(){
 
-            $container.children().css({
-            opacity: 1
-            });
+          $container.children().css({
+          opacity: 1
+          });
 
-            $('#temp-load').remove();
-
-        });
+          $('#temp-load').remove();
 
       });
 
