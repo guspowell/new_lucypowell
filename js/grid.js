@@ -45,6 +45,17 @@ $(window).load(function(){
 
     if(scrollTop + windowHeight == docuHeight){
 
+      nextTenImages = imagesData.splice(0,2);
+
+      var content =
+          "<div class='box " + nextTenImages[0]["type"] + "'" + ">" +
+            "<div class='box-wrapper'>" +
+              "<img src='" + nextTenImages[0]["src"] + "' />" +
+            "</div>"
+          "</div>"
+      console.log(content)
+
+
       $('body').append('<div id="temp-load"</div>');
 
       page += 1;

@@ -5,11 +5,10 @@ $(document).ready(function(){
 
 
 function addFirstImagesToDom(){
-  var imagesLeft = imagesData;
   var imagesToAddToDom = [];
 
   for (var i = 0; i < 10; i++) {
-    imagesToAddToDom.push(imagesLeft[i]);
+    imagesToAddToDom.push(imagesData[i]);
     var content =
         "<div class='box " + imagesToAddToDom[i]["type"] + "'" + ">" +
           "<div class='box-wrapper'>" +
@@ -21,8 +20,9 @@ function addFirstImagesToDom(){
   }
 
   imagesData.splice(0,10);
-
 };
+
+var imagesLeft = []
 
 var imagesData = [
   { "name" : "The Harbour",
@@ -92,6 +92,30 @@ var imagesData = [
     "src" : "images/poppy-pot.jpg",
     "type": "still-life",
     "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  {
+    "name" : "The Red Chair",
+    "src" : "images/the-red-chair.jpg",
+    "type": "still-life",
+    "size" : {"width" : 80, "height" : 65},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  {
+    "name" : "The Red Chair",
+    "src" : "images/the-red-chair.jpg",
+    "type": "still-life",
+    "size" : {"width" : 80, "height" : 65},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  {
+    "name" : "The Red Chair",
+    "src" : "images/the-red-chair.jpg",
+    "type": "still-life",
+    "size" : {"width" : 80, "height" : 65},
     "medium" : "oil on board",
     "status" : "sold"
   },
