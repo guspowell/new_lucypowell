@@ -55,7 +55,6 @@ $(window).load(function(){
             "</div>" +
           "</div>"
       };
-      console.log(content)
 
       $('body').append('<div id="temp-load"><div id="grid"></div></div>');
 
