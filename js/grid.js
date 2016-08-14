@@ -35,9 +35,7 @@ $(window).load(function(){
     return false;
   });
 
-  var page = 1;
-
-  $(window).scroll(function(){
+  $(window).scroll(function() {
 
     var scrollTop = $(window).scrollTop();
     var windowHeight = $(window).height();
@@ -57,9 +55,6 @@ $(window).load(function(){
       };
 
       $('body').append('<div id="temp-load"><div id="grid"></div></div>');
-
-      page += 1;
-
       $('#temp-load > #grid').append(content)
 
       $('#temp-load > #grid').children().css({
@@ -69,14 +64,12 @@ $(window).load(function(){
       var toAdd = $('#temp-load > #grid').html();
 
       $container.isotope('insert', $(toAdd), function(){
-
-          $container.children().css({
+        $container.children().css({
           opacity: 1
-          });
-
-          $('#temp-load').remove();
-
+        });
+        $('#temp-load').remove();
       });
+
 
     }
 
