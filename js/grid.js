@@ -54,7 +54,7 @@ $(window).load(function(){
 
     if(scrollTop + windowHeight == docuHeight){
 
-      nextTenImages = imagesData.splice(0,20);
+      nextTenImages = imagesData.splice(0,5);
       var content = ""
       for (var i = 0; i < nextTenImages.length; i++) {
           content +=
