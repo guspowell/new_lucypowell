@@ -5,9 +5,17 @@ body, html, #entry-page-wrapper {
 }
 
 #entry-page-wrapper {
-  background: url("../images/background2.jpg");
+  /*background: url("../images/background2.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+
+  background:url("../images/background2.jpg") -25px -50px;
+  position:fixed ;
+  top:0;
+  width:100%;
+  z-index:0;
+    height:100%;
+    background-size: calc(100% + 50px);
 }
 
 #entry-page-wrapper {
