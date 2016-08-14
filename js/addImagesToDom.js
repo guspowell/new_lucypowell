@@ -7,7 +7,7 @@ $(document).ready(function(){
 function addFirstImagesToDom(){
   var imagesToAddToDom = [];
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 20; i++) {
     imagesToAddToDom.push(imagesData[i]);
     var content =
         "<div class='box " + imagesToAddToDom[i]["type"] + "'" + ">" +
