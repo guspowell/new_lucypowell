@@ -1,0 +1,82 @@
+
+body, html, #entry-page-wrapper {
+    width: 100%;
+    height: 100%
+}
+
+#entry-page-wrapper {
+  background: url("../images/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#entry-page-wrapper {
+    display: table;
+}
+
+#entry-page-wrapper #box {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+#entry-page-wrapper .title {
+  font-size: 100px;
+  line-height: 100px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 20px;
+}
+#entry-page-wrapper .sub-title {
+  font-size: 40px;
+  line-height: 100px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+#entry-page-wrapper button.enter {
+  background-color: transparent;
+  text-decoration: none;
+  border: 2px solid white;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+#entry-page-wrapper button.enter:focus {
+  outline: 0;
+}
+
+#entry-page-wrapper button.enter:hover {
+  background-color: white;
+  border: 2px solid white;
+  color: #2a343c;
+}
+
+@media (max-width: 950px) {
+  #entry-page-wrapper .title {
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 16px;
+  }
+}
+@media (max-width: 800px) {
+  #entry-page-wrapper .title {
+    font-size: 50px;
+    line-height: 50px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 16px;
+  }
+  #entry-page-wrapper .sub-title {
+    font-size: 30px;
+    line-height: 100px;
+    color: white;
+    letter-spacing: 2px;
+  }
+}
