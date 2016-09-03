@@ -2,27 +2,20 @@ $(document).ready(function(){
   addFirstImagesToDom();
 });
 
-
-
 function addFirstImagesToDom(){
   var imagesToAddToDom = [];
-
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 10; i++) {
     imagesToAddToDom.push(imagesData[i]);
     var content =
-        "<div class='box " + imagesToAddToDom[i]["type"] + "'" + ">" +
-          "<div class='box-wrapper'>" +
-            "<img src='" + imagesToAddToDom[i]["src"] + "' />" +
-          "</div>"
-        "</div>"
-
-        $("#grid").append(content);
+    "<div class='box " + imagesToAddToDom[i]["type"] + "'" + ">" +
+      "<div class='box-wrapper'>" +
+        "<img src='" + imagesToAddToDom[i]["src"] + "' />" +
+      "</div>"
+    "</div>"
+    $("#grid").append(content);
   }
-
-  imagesData.splice(0,20);
+  imagesData.splice(0,10);
 };
-
-var imagesLeft = []
 
 var imagesData = [
   { "name" : "After the Party",

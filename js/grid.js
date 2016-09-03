@@ -38,23 +38,19 @@ $(window).load(function(){
 
   var timer;
 
-
-
   $(window).scroll(function() {
       // timeout to wait 500 ms
       timer = setTimeout(scrollEvt, 500);
   });
-
-
 
   function scrollEvt() {
     var scrollTop = $(window).scrollTop();
     var windowHeight = $(window).height();
     var docuHeight = $(document).height();
 
+    console.log(imagesData);
     if(scrollTop + windowHeight == docuHeight){
-
-      nextTenImages = imagesData.splice(0,5);
+      nextTenImages = imagesData.splice(0,10);
       var content = ""
       for (var i = 0; i < nextTenImages.length; i++) {
           content +=
