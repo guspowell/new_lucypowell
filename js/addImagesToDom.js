@@ -23,12 +23,9 @@ $(window).scroll(function() {
   var scrollTop = $(window).scrollTop();
   var windowHeight = $(window).height();
   var docuHeight = $(document).height();
-  console.log(docuHeight);
-  console.log(windowHeight+scrollTop);
   if(scrollTop + windowHeight == docuHeight){
     addTenImages();
   }
-
 });
 
 
@@ -44,20 +41,15 @@ function addTenImages() {
           "</div>" +
         "</div>"
     };
-    nextTenImages = [];
 
-    $('body').append('<div id="temp-load"><div id="grid"></div>');
-    $('#temp-load > #grid').css({
-      display: 'none'
-    });
-    $('#temp-load > #grid').append(content)
+    console.log(content)
 
     var toAdd = $('#temp-load > #grid').html();
-    var $newItems = $('#temp-load > #grid').children();
+    var newItems = $(content);
+    console.log(content)
     var $container = $('.content > #grid')
-
-    $container.isotope( 'insert', $newItems);
     $(window).scrollTop($(window).scrollTop()+1);
+    $container.isotope( 'insert', newItems);
     $(window).scrollTop($(window).scrollTop()-1);
     $('#temp-load').remove();
 };
@@ -203,137 +195,137 @@ var imagesData = [
     "medium" : "oil on board",
     "status" : "sold"
   },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/21.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/22.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/23.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/24.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/25.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/26.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/27.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/29.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/30.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/31.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/32.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/33.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/34.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/35.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/36.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/37.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/38.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/39.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
-  // { "name" : "xxx",
-  //   "src" : "images/grid-images/40.jpg",
-  //   "type": "still-life",
-  //   "size" : {"width" : 51, "height" : 38},
-  //   "medium" : "oil on board",
-  //   "status" : "sold"
-  // },
+  { "name" : "xxx",
+    "src" : "images/grid-images/21.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/22.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/23.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/24.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/25.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/26.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/27.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/29.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/30.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/31.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/32.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/33.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/34.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/35.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/36.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/37.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/38.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/39.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
+  { "name" : "xxx",
+    "src" : "images/grid-images/40.jpg",
+    "type": "still-life",
+    "size" : {"width" : 51, "height" : 38},
+    "medium" : "oil on board",
+    "status" : "sold"
+  },
 ]
