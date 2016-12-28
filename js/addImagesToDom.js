@@ -141,7 +141,7 @@ var imagesData = [
   },
   { "name" : "The Red Chair",
     "src" : "images/grid-images/13.jpg",
-    "type": "still-life",
+    "type": "figure-and-portrait",
     "size" : {"width" : 51, "height" : 38},
     "medium" : "oil on board",
     "status" : "sold"
