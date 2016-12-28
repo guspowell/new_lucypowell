@@ -35,47 +35,4 @@ $(window).load(function(){
     return false;
   });
 
-
-  var timer;
-
-  $(window).scroll(function() {
-      // timeout to wait 500 ms
-      timer = setTimeout(scrollEvt, 500);
-  });
-
-  function scrollEvt() {
-    var scrollTop = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    var docuHeight = $(document).height();
-
-    if(scrollTop + windowHeight == docuHeight){
-      nextTenImages = imagesData.splice(0,10);
-      var content = ""
-      for (var i = 0; i < nextTenImages.length; i++) {
-          content +=
-          "<div class='box " + nextTenImages[i]["type"] + "'" + ">" +
-            "<div class='box-wrapper'>" +
-              "<img src='" + nextTenImages[i]["src"] + "' />" +
-            "</div>" +
-          "</div>"
-      };
-
-      $('body').append('<div id="temp-load"><div id="grid"></div></div>');
-      $('#temp-load > #grid').append(content)
-
-      $('#temp-load > #grid').children().css({
-          opacity: 0
-      });
-
-      var toAdd = $('#temp-load > #grid').html();
-
-      $container.isotope('insert', $(toAdd), function(){
-        $container.children().css({
-          opacity: 1
-        });
-        $('#temp-load').remove();
-      });
-    }
-  }
-
 });
