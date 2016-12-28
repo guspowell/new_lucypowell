@@ -20,16 +20,19 @@ function addImagesToDom(){
 var timer;
 
 $(window).scroll(function() {
-  addTenImages();
+  var scrollTop = $(window).scrollTop();
+  var windowHeight = $(window).height();
+  var docuHeight = $(document).height();
+  console.log(docuHeight);
+  console.log(windowHeight+scrollTop);
+  if(scrollTop + windowHeight == docuHeight){
+    addTenImages();
+  }
+
 });
 
 
 function addTenImages() {
-  var scrollTop = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  var docuHeight = $(document).height();
-
-  if(scrollTop + windowHeight == docuHeight){
     console.log('EXECUTE')
     nextTenImages = imagesData.splice(0,1);
     var content = ""
@@ -43,7 +46,6 @@ function addTenImages() {
     };
     nextTenImages = [];
 
-
     $('body').append('<div id="temp-load"><div id="grid"></div>');
     $('#temp-load > #grid').css({
       display: 'none'
@@ -51,17 +53,13 @@ function addTenImages() {
     $('#temp-load > #grid').append(content)
 
     var toAdd = $('#temp-load > #grid').html();
-
     var $newItems = $('#temp-load > #grid').children();
     var $container = $('.content > #grid')
 
     $container.isotope( 'insert', $newItems);
 
     $('#temp-load').remove();
-
-  }
-
-}
+};
 
 var imagesData = [
   { "name" : "After the Party",
