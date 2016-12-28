@@ -1,10 +1,11 @@
-$(window).load(function(){
-
+// $(window).on('load', function(){
+$( document ).ready(function(){
   var $container = $('#grid');
 
   $container.imagesLoaded( function(){
-    console.log("imagesLoaded")
     $container.isotope({
+      itemSelector: '.box',
+      layoutMode: 'masonry',
       filter: '*',
       animationOptions: {
        duration: 750,
@@ -13,6 +14,7 @@ $(window).load(function(){
      },
     });
   });
+
 
   $('.sidebar a').click(function(){
     var selector1 = $(this).attr('title');

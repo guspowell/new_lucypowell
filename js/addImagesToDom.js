@@ -23,13 +23,15 @@ $(window).scroll(function() {
   addTenImages();
 });
 
+
 function addTenImages() {
   var scrollTop = $(window).scrollTop();
   var windowHeight = $(window).height();
   var docuHeight = $(document).height();
 
   if(scrollTop + windowHeight == docuHeight){
-    nextTenImages = imagesData.splice(0,10);
+    console.log('EXECUTE')
+    nextTenImages = imagesData.splice(0,1);
     var content = ""
     for (var i = 0; i < nextTenImages.length; i++) {
         content +=
@@ -41,22 +43,22 @@ function addTenImages() {
     };
     nextTenImages = [];
 
-    content = '<div class="box still-life isotope-item" style="position: absolute; left: 0px; top: 0px; opacity: 1; transform: translate3d(752px, 1061px, 0px);"><div class="box-wrapper"><img src="images/grid-images/11.jpg"></div></div><div class="box landscape isotope-item" style="position: absolute; left: 0px; top: 0px; opacity: 1; transform: translate3d(752px, 1085px, 0px);">'
 
-    $('body').append('<div id="temp-load"><div id="grid"></div></div>');
+    $('body').append('<div id="temp-load"><div id="grid"></div>');
     $('#temp-load > #grid').css({
       display: 'none'
     });
     $('#temp-load > #grid').append(content)
 
     var toAdd = $('#temp-load > #grid').html();
-    var $container = $('#grid');
 
     var $newItems = $('#temp-load > #grid').children();
-    var $container = $('#grid');
+    var $container = $('.content > #grid')
+
     $container.isotope( 'insert', $newItems);
 
     $('#temp-load').remove();
+
   }
 
 }
