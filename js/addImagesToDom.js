@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  addFirstImagesToDom();
+  addImagesToDom();
 });
 
-function addFirstImagesToDom(){
+function addImagesToDom(){
   var imagesToAddToDom = [];
   for (var i = 0; i < 10; i++) {
     imagesToAddToDom.push(imagesData[i]);

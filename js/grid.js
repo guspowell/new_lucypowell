@@ -48,7 +48,6 @@ $(window).load(function(){
     var windowHeight = $(window).height();
     var docuHeight = $(document).height();
 
-    console.log(imagesData);
     if(scrollTop + windowHeight == docuHeight){
       nextTenImages = imagesData.splice(0,10);
       var content = ""
@@ -76,8 +75,6 @@ $(window).load(function(){
         });
         $('#temp-load').remove();
       });
-
-
     }
   }
 
