@@ -57,7 +57,8 @@ function addTenImages() {
     var $container = $('.content > #grid')
 
     $container.isotope( 'insert', $newItems);
-
+    $(window).scrollTop($(window).scrollTop()+1);
+    $(window).scrollTop($(window).scrollTop()-1);
     $('#temp-load').remove();
 };
 
