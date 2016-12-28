@@ -62,6 +62,7 @@ function addTenImages() {
       $('#temp-load').remove();
     });
     $(window).scrollTop($(window).scrollTop()-1);
+    $(window).scrollTop($(window).scrollTop()+1);
   }
 
 }
